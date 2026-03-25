@@ -109,3 +109,5 @@ cp -R claude-skills/competitive-analysis .claude/skills/
 - 每个 skill 使用单独目录
 - 目录名使用 `kebab-case`
 - 入口文件统一为 `SKILL.md`
+
+<small>友链：<a href="https://linux.do/">linux.do</a></small>
