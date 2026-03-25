@@ -154,21 +154,29 @@ timeline
 **为什么需要这个图**：表格列出各家定位后，读者需要自己在脑中比较差异。定位图把差异变成空间距离，一眼就能看出谁和谁直接竞争、哪里有市场空白。
 
 ```mermaid
-quadrantChart
-    title 竞争定位图
-    x-axis 低价格 --> 高价格
-    y-axis 功能简单 --> 功能丰富
-    quadrant-1 高端全能型
-    quadrant-2 性价比型
-    quadrant-3 入门基础型
-    quadrant-4 高价简约型
-    竞品A: [0.7, 0.8]
-    竞品B: [0.3, 0.6]
-    竞品C: [0.5, 0.4]
-    我方: [0.4, 0.7]
+flowchart TB
+    classDef q1 fill:#E8F3FF,stroke:#4A90D9,color:#1F1F1F
+    classDef q2 fill:#F6FFED,stroke:#52C41A,color:#1F1F1F
+    classDef q3 fill:#FFF7E6,stroke:#FAAD14,color:#1F1F1F
+    classDef q4 fill:#FFF1F0,stroke:#FF7875,color:#1F1F1F
+
+    subgraph top["功能丰富"]
+        direction LR
+        Q2["低价格<br/>性价比型<br/>竞品B"]:::q2
+        Q1["高价格<br/>高端全能型<br/>竞品A / 我方"]:::q1
+    end
+
+    subgraph bottom["功能简单"]
+        direction LR
+        Q3["低价格<br/>入门基础型<br/>竞品C"]:::q3
+        Q4["高价格<br/>高价简约型"]:::q4
+    end
 ```
 
+上方代表功能更丰富，下方代表功能更简单；左侧代表低价格，右侧代表高价格。
+
 **坐标轴选择建议**（根据行业灵活调整）：
+
 - SaaS：功能丰富度 vs 定价水平
 - 电商：品类广度 vs 服务深度
 - 教育：内容深度 vs 覆盖广度
